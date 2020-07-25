@@ -1,0 +1,16 @@
+name: Manage PR
+on:
+  schedule:
+    - cron: "*/8 * * * *"
+
+jobs:
+  run:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: bluez/action-manage-pr@master
+      with:
+        target_repo: 'bluez/bluez'
+        action_token: ${{ secrets.ACTION_TOKEN_BOT }}
