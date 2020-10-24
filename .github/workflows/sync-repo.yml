@@ -4,10 +4,8 @@ on:
     - cron: "*/30 * * * *"
 
 jobs:
-  run:
-
+  bluez:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - uses: bluez/action-sync-repo@master
