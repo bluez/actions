@@ -7,6 +7,7 @@ jobs:
   bluez:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
     - uses: bluez/action-sync-repo@master
       with:
         src_repo: 'https://git.kernel.org/pub/scm/bluetooth/bluez.git'
@@ -19,6 +20,7 @@ jobs:
     needs: bluez
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
     - uses: bluez/action-sync-repo@master
       with:
         src_repo: 'https://git.kernel.org/pub/scm/linux/kernel/git/bluetooth/bluetooth-next.git'
