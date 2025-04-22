@@ -1,7 +1,7 @@
 name: Sync Repo
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "*/5 * * * *"
 
 jobs:
   bluez:
